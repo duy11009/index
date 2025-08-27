@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông Tin Về Luffy và Cửa Hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ff4747;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .shop {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .item:last-child {
+            border-bottom: none;
+        }
+        .item button {
+            padding: 6px 12px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .item button:hover {
+            background-color: #004999;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Monkey D. Luffy - Vua Hải Tặc Tương Lai</h1>
+</header>
+
+<div class="content">
+    <h2>Thông tin chi tiết</h2>
+    <p><strong>Tên đầy đủ:</strong> Monkey D. Luffy</p>
+    <p><strong>Biệt danh:</strong> Mũ Rơm Luffy</p>
+    <p><strong>Ước mơ:</strong> Trở thành Vua Hải Tặc</p>
+    <p><strong>Trái Ác Quỷ:</strong> Trái Hito Hito no Mi, model: Nika (loại Zoan thần thoại)</p>
+    <p><strong>Nhóm:</strong> Băng Hải Tặc Mũ Rơm</p>
+    <p><strong>Người sáng lập:</strong> Eiichiro Oda</p>
+    <p>Luffy là nhân vật chính trong bộ truyện nổi tiếng One Piece. Với ước mơ trở thành Vua Hải Tặc, cậu đã phiêu lưu khắp Grand Line, chiến đấu với những kẻ thù mạnh mẽ và kết bạn với những đồng đội trung thành.</p>
+
+    <h2>Cửa hàng của Luffy</h2>
+    <div class="shop">
+        <div class="item">
+            <p><strong>Mũ Rơm Chính Hãng</strong> - 100.000 Beli</p>
+            <p>Còn lại: <span id="item1">10</span></p>
+            <button onclick="buy('item1')">Mua</button>
+        </div>
+        <div class="item">
+            <p><strong>Trái Ác Quỷ (mô hình)</strong> - 500.000 Beli</p>
+            <p>Còn lại: <span id="item2">5</span></p>
+            <button onclick="buy('item2')">Mua</button>
+        </div>
+        <div class="item">
+            <p><strong>Áo Hải Tặc Mũ Rơm</strong> - 150.000 Beli</p>
+            <p>Còn lại: <span id="item3">8</span></p>
+            <button onclick="buy('item3')">Mua</button>
+        </div>
+        <div class="item">
+            <p><strong>Poster Truy Nã Luffy</strong> - 50.000 Beli</p>
+            <p>Còn lại: <span id="item4">20</span></p>
+            <button onclick="buy('item4')">Mua</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function buy(itemId) {
+        const item = document.getElementById(itemId);
+        let count = parseInt(item.innerText);
+        if (count > 0) {
+            count--;
+            item.innerText = count;
+            alert("Bạn đã mua hàng thành công!");
+        } else {
+            alert("Hết hàng rồi bạn ơi!");
+        }
+    }
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Cá Nhân</title>
+</head>
+<body>
+    <h1>Chào mừng bạn, Duy!</h1>
+    <p>Đăng nhập thành công.</p>
+</body>
+</html>
